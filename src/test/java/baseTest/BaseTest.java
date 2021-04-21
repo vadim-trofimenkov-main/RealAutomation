@@ -14,7 +14,7 @@ import pages.HomePage;
 
 public class BaseTest {
     private WebDriver driver;
-    private String link = "http://the-internet.herokuapp.com/";
+    private String link = "http://the-internet.herokuapp.com";
     protected HomePage homePage;
 
      @BeforeClass
