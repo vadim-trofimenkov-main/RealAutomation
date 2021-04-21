@@ -25,4 +25,17 @@ public class HomePage {
         clickLink("Shifting Content").click();
         return new ShiftingContentMainPage(driver);
     }
+    public DropdownPage clickDropdown() {
+        clickLink("Dropdown").click();
+        return new DropdownPage(driver);
+    }
+    public HoversPage clickHovers() {
+        clickLink("Hovers").click();
+        return new HoversPage(driver);
+    }
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses").click();
+        return new KeyPressesPage(driver);
+    }
+
 }
