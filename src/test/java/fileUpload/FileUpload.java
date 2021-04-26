@@ -7,7 +7,7 @@ import pages.FileUploadPage;
 
 public class FileUpload extends BaseTest {
     @Test
-    public void testFileUpload(){
+    public void testFileUpload() {
         FileUploadPage fileUploadPage = homePage.clickFileUpload();
         fileUploadPage.uploadFile(
                 "C:\\Users\\vadim\\IdeaProjects\\RealAutomation\\src\\test\\resources\\chromedriver.exe");

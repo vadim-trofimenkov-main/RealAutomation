@@ -45,4 +45,8 @@ public class HomePage {
         clickLink("File Upload").click();
         return new FileUploadPage(driver);
     }
+    public EntryAdPage clickEntryAd() {
+        clickLink("Entry Ad").click();
+        return new EntryAdPage(driver);
+    }
 }
