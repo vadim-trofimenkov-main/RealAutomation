@@ -37,5 +37,12 @@ public class HomePage {
         clickLink("Key Presses").click();
         return new KeyPressesPage(driver);
     }
-
+    public AlertsPage clickJavaScriptAlerts() {
+        clickLink("JavaScript Alerts").click();
+        return new AlertsPage(driver);
+    }
+    public FileUploadPage clickFileUpload() {
+        clickLink("File Upload").click();
+        return new FileUploadPage(driver);
+    }
 }
