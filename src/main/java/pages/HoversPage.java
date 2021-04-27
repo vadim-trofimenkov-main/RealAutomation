@@ -21,7 +21,7 @@ public class HoversPage {
 
         Actions action = new Actions(driver);
         action.moveToElement(image).perform();
-        return new PictureCaption(picture.findElement((SearchContext) caption));
+        return new PictureCaption(image.findElement(caption));
     }
 
     public class PictureCaption {
