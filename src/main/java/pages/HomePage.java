@@ -54,4 +54,8 @@ public class HomePage {
         clickLink("Forgot Password").click();
         return new ForgotPasswordPage(driver);
     }
+    public HorizontalSliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider").click();
+        return new HorizontalSliderPage(driver);
+    }
 }
