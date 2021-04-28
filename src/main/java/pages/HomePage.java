@@ -58,4 +58,8 @@ public class HomePage {
         clickLink("Horizontal Slider").click();
         return new HorizontalSliderPage(driver);
     }
+    public WYSIWYGEditorPage clickWYSIWYGEditor() {
+        clickLink("WYSIWYG Editor").click();
+        return new WYSIWYGEditorPage(driver);
+    }
 }
