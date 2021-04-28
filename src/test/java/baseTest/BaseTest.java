@@ -11,19 +11,22 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class BaseTest {
     private WebDriver driver;
     private String link = "http://the-internet.herokuapp.com";
     protected HomePage homePage;
 
-     @BeforeClass
+    @BeforeClass
     public void setUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
         // driver.get(link);
         // driver.navigate().to(link);
         driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         goHome();
         //driver.manage().window().setSize(new Dimension(360, 720));
         // List<WebElement> aLinks = driver.findElements(By.tagName("a"));
@@ -33,12 +36,13 @@ public class BaseTest {
         homePage = new HomePage(driver);
 
     }
+
     @BeforeMethod
-    public void goHome(){
-         driver.get(link);
+    public void goHome() {
+        driver.get(link);
     }
 
-     @AfterClass
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }

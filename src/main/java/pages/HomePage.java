@@ -62,4 +62,8 @@ public class HomePage {
         clickLink("WYSIWYG Editor").click();
         return new WYSIWYGEditorPage(driver);
     }
+    public DynamicLoadingPage clickDynamicLoading() {
+        clickLink("Dynamic Loading").click();
+        return new DynamicLoadingPage(driver);
+    }
 }
