@@ -11,8 +11,8 @@ public class HorizontalSliderTest extends BaseTest {
     public void testHorizontalSlider() {
         HorizontalSliderPage horizontalSliderPage = homePage.clickHorizontalSlider();
         if (horizontalSliderPage.getPageTitle().equals("Horizontal Slider")) {
-            horizontalSliderPage.setSliderValue(3);
-            Assert.assertEquals(horizontalSliderPage.getRange(), "4", "Wrong range");
+            horizontalSliderPage.setSliderValue(4);
+            Assert.assertEquals(horizontalSliderPage.getRangeValue(), 4, "Wrong range");
         } else throw new NoHorizontalSliderPageException();
     }
 }
