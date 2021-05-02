@@ -85,4 +85,8 @@ public class HomePage {
         clickLink("Infinite Scroll").click();
         return new InfiniteScrollPage(driver);
     }
+    public FramesPage clickFrames() {
+        clickLink("Frames").click();
+        return new FramesPage(driver);
+    }
 }
