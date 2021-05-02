@@ -21,30 +21,36 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
-    public ShiftingContentMainPage clickShiftingContent(){
+    public ShiftingContentMainPage clickShiftingContent() {
         clickLink("Shifting Content").click();
         return new ShiftingContentMainPage(driver);
     }
+
     public DropdownPage clickDropdown() {
         clickLink("Dropdown").click();
         return new DropdownPage(driver);
     }
+
     public HoversPage clickHovers() {
         clickLink("Hovers").click();
         return new HoversPage(driver);
     }
+
     public KeyPressesPage clickKeyPresses() {
         clickLink("Key Presses").click();
         return new KeyPressesPage(driver);
     }
+
     public AlertsPage clickJavaScriptAlerts() {
         clickLink("JavaScript Alerts").click();
         return new AlertsPage(driver);
     }
+
     public FileUploadPage clickFileUpload() {
         clickLink("File Upload").click();
         return new FileUploadPage(driver);
     }
+
     public EntryAdPage clickEntryAd() {
         clickLink("Entry Ad").click();
         return new EntryAdPage(driver);
@@ -54,16 +60,29 @@ public class HomePage {
         clickLink("Forgot Password").click();
         return new ForgotPasswordPage(driver);
     }
+
     public HorizontalSliderPage clickHorizontalSlider() {
         clickLink("Horizontal Slider").click();
         return new HorizontalSliderPage(driver);
     }
+
     public WYSIWYGEditorPage clickWYSIWYGEditor() {
         clickLink("WYSIWYG Editor").click();
         return new WYSIWYGEditorPage(driver);
     }
+
     public DynamicLoadingPage clickDynamicLoading() {
         clickLink("Dynamic Loading").click();
         return new DynamicLoadingPage(driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDOM() {
+        clickLink("Large & Deep DOM").click();
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScroll() {
+        clickLink("Infinite Scroll").click();
+        return new InfiniteScrollPage(driver);
     }
 }
