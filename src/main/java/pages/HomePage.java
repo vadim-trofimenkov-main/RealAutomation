@@ -89,4 +89,8 @@ public class HomePage {
         clickLink("Frames").click();
         return new FramesPage(driver);
     }
+    public MultiplyWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows").click();
+        return new MultiplyWindowsPage(driver);
+    }
 }
