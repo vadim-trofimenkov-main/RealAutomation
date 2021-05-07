@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/vadim/IdeaProjects/RealAutomation">
+        <classes>
+            <class name="alerts.AlertTests">
+                <methods>
+                    <include name="testAlerts"/>
+                    <include name="testConfirm"/>
+                    <include name="testPrompt"/>
+                </methods>
+            </class>
+            <class name="dropdown.DropdownTest">
+                <methods>
+                    <include name="testSelectOption"/>
+                </methods>
+            </class>
+            <class name="email.RetrieveEmailTest">
+                <methods>
+                    <include name="testPasswordRetrieve"/>
+                </methods>
+            </class>
+            <class name="fileUpload.FileUpload">
+                <methods>
+                    <include name="testFileUpload"/>
+                </methods>
+            </class>
+            <class name="frames.FrameTests">
+                <methods>
+                    <include name="testEditor"/>
+                </methods>
+            </class>
+            <class name="frames.NestedFramesTest">
+                <methods>
+                    <include name="testMiddleFrame"/>
+                    <include name="testBottomFrame"/>
+                    <include name="testLeftFrame"/>
+                    <include name="testRightFrame"/>
+                </methods>
+            </class>
+            <class name="hovers.HoversTest">
+                <methods>
+                    <include name="testHoverUser1"/>
+                </methods>
+            </class>
+            <class name="javascript.JavaScriptTests">
+                <methods>
+                    <include name="testJS"/>
+                    <include name="testScrollToParagraph"/>
+                </methods>
+            </class>
+            <class name="keys.KeyTests">
+                <methods>
+                    <include name="testBackSpace"/>
+                    <include name="testShortcuts"/>
+                </methods>
+            </class>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                </methods>
+            </class>
+            <class name="modals.ModalTests">
+                <methods>
+                    <include name="testEntryAd"/>
+                </methods>
+            </class>
+            <class name="navigation.NavigationTests">
+                <methods>
+                    <include name="testNavigation"/>
+                    <include name="testSwitchToTab"/>
+                </methods>
+            </class>
+            <class name="numberOfMenuItems.CheckNumberOfItems">
+                <methods>
+                    <include name="testNumberOfMenuElementItems"/>
+                </methods>
+            </class>
+            <class name="slider.HorizontalSliderTest">
+                <methods>
+                    <include name="testHorizontalSlider"/>
+                </methods>
+            </class>
+            <class name="wait.WaitTests">
+                <methods>
+                    <include name="testWait"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

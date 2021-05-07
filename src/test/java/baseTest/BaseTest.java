@@ -2,6 +2,7 @@ package baseTest;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -29,13 +30,14 @@ public class BaseTest {
     @BeforeClass
     public void setUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-         driver = new EventFiringWebDriver(new ChromeDriver());
+         driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
          driver.register(new EventReporter());
         // driver.get(link);
         // driver.navigate().to(link);
         driver.manage().window().maximize();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         goHome();
+        setCookie();
         //driver.manage().window().setSize(new Dimension(360, 720));
         // List<WebElement> aLinks = driver.findElements(By.tagName("a"));
         //   System.out.println("A-links quantity is "+ aLinks.size());
@@ -80,6 +82,21 @@ public class BaseTest {
         }
     }
 
+    private ChromeOptions getChromeOptions(){
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"}); //убирает строку в браузере Chrome is driven by..
+   //     chromeOptions.setHeadless(true);   // скрывает окно браузера при запуске теста
+        return chromeOptions;
+    }
+    private void setCookie(){
+        Cookie cookie = new Cookie
+                .Builder("Stormnet", "1234")
+                .domain("the-internet.herokuapp.com")
+                .build();
+
+        driver.manage().addCookie(cookie);
+        driver.manage().deleteCookieNamed("optimizelyBuckets");
+    }
 
 
     /*public static void main(String[] args) {
